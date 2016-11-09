@@ -2,15 +2,35 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    {% if title %}
-    <title>{{ title }} - microblog </title>
-    {% else %}
-    <title> Karol Sz. - microblog </title>
-    {% endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <title> Karol Sz. - mikro-blog </title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.css">
+    
 </head>
 <body>
-    <div> Microblog: <a href="/index"> Home </a></div>
-    <hr>
-    {% block content %}{% endblock %}
+<div class="container">
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Mikro-blog</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/index">Główna</a></li>
+      <li><a href="/index">O Mnie</a></li>
+      <li><a href="/index">Kontakt</a></li>
+      <li><a href="/index">Artykuły</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+    <br>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
 </body>
 </html>
